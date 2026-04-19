@@ -1,0 +1,183 @@
+<html class="dark"><head>
+<meta charset="utf-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-container": "#5d6b00",
+            "surface-container-lowest": "#0e0e0e",
+            "surface": "#131313",
+            "primary-container": "#ff5717",
+            "secondary-fixed": "#d2f000",
+            "tertiary-fixed-dim": "#c6c6c7",
+            "on-secondary-fixed-variant": "#414c00",
+            "outline": "#ac897e",
+            "on-tertiary-fixed-variant": "#454747",
+            "secondary-container": "#d2f000",
+            "error-container": "#93000a",
+            "on-primary-fixed-variant": "#842500",
+            "outline-variant": "#5c4037",
+            "on-tertiary": "#2f3131",
+            "on-error": "#690005",
+            "on-background": "#e5e2e1",
+            "secondary": "#ffffff",
+            "surface-container": "#201f1f",
+            "inverse-primary": "#ad3300",
+            "primary-fixed-dim": "#ffb59e",
+            "inverse-surface": "#e5e2e1",
+            "on-error-container": "#ffdad6",
+            "tertiary": "#c6c6c7",
+            "tertiary-fixed": "#e2e2e2",
+            "on-primary-fixed": "#3a0b00",
+            "on-primary": "#5e1700",
+            "surface-bright": "#393939",
+            "on-surface-variant": "#e6beb2",
+            "on-secondary-fixed": "#191e00",
+            "on-tertiary-container": "#282a2a",
+            "on-surface": "#e5e2e1",
+            "surface-container-highest": "#353534",
+            "surface-container-low": "#1c1b1b",
+            "inverse-on-surface": "#313030",
+            "primary-fixed": "#ffdbd0",
+            "on-tertiary-fixed": "#1a1c1c",
+            "error": "#ffb4ab",
+            "background": "#131313",
+            "on-primary-container": "#521300",
+            "surface-container-high": "#2a2a2a",
+            "surface-variant": "#353534",
+            "primary": "#ffb59e",
+            "surface-tint": "#ffb59e",
+            "tertiary-container": "#909191",
+            "surface-dim": "#131313",
+            "secondary-fixed-dim": "#b8d300",
+            "on-secondary": "#2c3400"
+          },
+          "borderRadius": {
+            "DEFAULT": "0px",
+            "lg": "0px",
+            "xl": "0px",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "headline": ["Space Grotesk"],
+            "body": ["Space Grotesk"],
+            "label": ["Space Grotesk"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      background-color: #0e0e0e;
+      color: #e5e2e1;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0e0e0e;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #333333;
+    }
+  </style>
+</head>
+<body class="dark selection:bg-secondary-container selection:text-black">
+<!-- TOP NAV BAR (ANCHOR) -->
+<header class="bg-[#0E0E0E] text-[#FF4F00] font-['Space_Grotesk'] font-bold tracking-tighter uppercase docked full-width top-0 border-b-[3px] border-[#333333] flex justify-between items-center w-full px-6 py-4 h-16 fixed z-50">
+<div class="text-2xl font-black text-[#FF4F00] tracking-[-0.04em]">INDUSTRIAL AUTHORITY</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-white opacity-70 hover:opacity-100 hover:bg-[#131313] transition-none" href="#">DASHBOARD</a>
+<a class="text-white opacity-70 hover:opacity-100 hover:bg-[#131313] transition-none" href="#">LIBRARY</a>
+<a class="text-white opacity-70 hover:opacity-100 hover:bg-[#131313] transition-none" href="#">ANALYTICS</a>
+<a class="text-[#DFFF00] border-b-[3px] border-[#DFFF00] pb-1 hover:bg-[#131313] transition-none" href="#">EXTENSION</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-white opacity-70 hover:opacity-100 transition-none" data-icon="settings">settings</button>
+<button class="material-symbols-outlined text-white opacity-70 hover:opacity-100 transition-none" data-icon="account_circle">account_circle</button>
+</div>
+</header>
+<!-- MAIN CANVAS (POPUP SIMULATION) -->
+<main class="pt-24 pb-12 flex items-center justify-center min-h-screen p-4">
+<div class="w-full max-w-[480px] bg-surface border-[3px] border-[#333333] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden">
+<!-- STRIPE HEADER -->
+<div class="bg-secondary-container h-2 w-full"></div>
+<div class="p-8">
+<!-- HEADER SECTION -->
+<div class="flex justify-between items-start mb-10">
+<div>
+<h1 class="text-4xl font-black uppercase tracking-tighter leading-none mb-2">Capture Prompt</h1>
+<p class="font-mono text-xs text-white opacity-50 uppercase tracking-widest">Extension_V.4.2 // SYS_OVERRIDE</p>
+</div>
+<div class="bg-primary-container p-2 border-[2px] border-black">
+<span class="material-symbols-outlined text-black font-black" data-icon="terminal" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+</div>
+<!-- FORM SECTION -->
+<div class="space-y-8">
+<div class="group">
+<label class="block font-mono text-[10px] text-secondary-container mb-2 uppercase tracking-[0.2em] font-bold">Input_Prompt_Identifier</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-[3px] border-[#333333] focus:border-secondary-container focus:ring-0 text-white font-mono text-lg p-5 uppercase placeholder:text-white/20 transition-none" placeholder="ENTER PROMPT TITLE..." type="text"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 opacity-20 group-focus-within:opacity-100 group-focus-within:text-secondary-container transition-none">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+</div>
+</div>
+</div>
+<!-- METADATA GRID (BENTO STYLE) -->
+<div class="grid grid-cols-2 gap-[3px] bg-[#333333] border-[3px] border-[#333333]">
+<div class="bg-surface p-4 flex flex-col gap-1">
+<span class="font-mono text-[10px] text-white/40 uppercase">Environment</span>
+<span class="font-bold text-sm">DESKTOP_CHROME</span>
+</div>
+<div class="bg-surface p-4 flex flex-col gap-1">
+<span class="font-mono text-[10px] text-white/40 uppercase">Status</span>
+<span class="font-bold text-sm flex items-center gap-2">
+<span class="w-2 h-2 bg-secondary-container"></span> READY
+              </span>
+</div>
+</div>
+<!-- ACTION BUTTON -->
+<div class="pt-4">
+<button class="group relative w-full bg-primary-container text-black font-black text-xl py-6 uppercase tracking-tighter flex items-center justify-center gap-3 active:translate-x-[2px] active:translate-y-[2px] transition-none border-[3px] border-black shadow-[4px_4px_0px_0px_#000000] hover:shadow-none transition-all">
+              SAVE TO ARCHIVE
+              <span class="material-symbols-outlined font-black" data-icon="inventory_2">inventory_2</span>
+</button>
+<div class="mt-4 flex justify-between items-center font-mono text-[10px] text-white/30 uppercase tracking-widest">
+<span>Path: root/extension/capture</span>
+<span>ID: #PX-8821</span>
+</div>
+</div>
+</div>
+</div>
+<!-- DECORATIVE DECOR -->
+<div class="absolute bottom-0 right-0 p-1 opacity-10">
+<span class="font-mono text-[60px] font-black leading-none select-none">IA</span>
+</div>
+</div>
+</main>
+<!-- BACKGROUND TEXTURE (DECORATIVE) -->
+<div class="fixed inset-0 pointer-events-none z-[-1] opacity-5">
+<div class="absolute inset-0 bg-[radial-gradient(#333333_1px,transparent_1px)] [background-size:20px_20px]"></div>
+</div>
+<!-- FLOATING STATUS (FAB REPLACEMENT FOR THIS CONTEXT) -->
+<div class="fixed bottom-6 right-6 flex flex-col items-end gap-2">
+<div class="bg-surface border-[2px] border-[#333333] px-3 py-1 font-mono text-[10px] uppercase">
+      Connection: <span class="text-secondary-container">SECURE</span>
+</div>
+<div class="bg-surface border-[2px] border-[#333333] px-3 py-1 font-mono text-[10px] uppercase">
+      Latency: <span class="text-primary-container">12ms</span>
+</div>
+</div>
+</body></html>

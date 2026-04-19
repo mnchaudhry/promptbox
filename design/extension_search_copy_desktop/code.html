@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>INDUSTRIAL AUTHORITY - SEARCH PROMPTS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#5d6b00",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface": "#131313",
+                        "primary-container": "#ff5717",
+                        "secondary-fixed": "#d2f000",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-secondary-fixed-variant": "#414c00",
+                        "outline": "#ac897e",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "secondary-container": "#d2f000",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#842500",
+                        "outline-variant": "#5c4037",
+                        "on-tertiary": "#2f3131",
+                        "on-error": "#690005",
+                        "on-background": "#e5e2e1",
+                        "secondary": "#ffffff",
+                        "surface-container": "#201f1f",
+                        "inverse-primary": "#ad3300",
+                        "primary-fixed-dim": "#ffb59e",
+                        "inverse-surface": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "tertiary": "#c6c6c7",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-primary-fixed": "#3a0b00",
+                        "on-primary": "#5e1700",
+                        "surface-bright": "#393939",
+                        "on-surface-variant": "#e6beb2",
+                        "on-secondary-fixed": "#191e00",
+                        "on-tertiary-container": "#282a2a",
+                        "on-surface": "#e5e2e1",
+                        "surface-container-highest": "#353534",
+                        "surface-container-low": "#1c1b1b",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed": "#ffdbd0",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "error": "#ffb4ab",
+                        "background": "#131313",
+                        "on-primary-container": "#521300",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-variant": "#353534",
+                        "primary": "#ffb59e",
+                        "surface-tint": "#ffb59e",
+                        "tertiary-container": "#909191",
+                        "surface-dim": "#131313",
+                        "secondary-fixed-dim": "#b8d300",
+                        "on-secondary": "#2c3400"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Space Grotesk"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #0e0e0e;
+        }
+        .mono {
+            font-family: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+        }
+        .brutalist-shadow {
+            box-shadow: 4px 4px 0px 0px #000000;
+        }
+        .active-glow {
+            box-shadow: 0 0 15px rgba(210, 240, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-background min-h-screen">
+<!-- TopNavBar Shell -->
+<header class="bg-[#0E0E0E] text-[#FF4F00] font-['Space_Grotesk'] font-bold tracking-tighter uppercase docked full-width top-0 border-b-[3px] border-[#333333] flex justify-between items-center w-full px-6 py-4 h-16">
+<div class="text-2xl font-black text-[#FF4F00] tracking-[-0.04em]">
+            INDUSTRIAL AUTHORITY
+        </div>
+<nav class="hidden md:flex gap-8">
+<a class="text-white opacity-70 hover:opacity-100 hover:bg-[#131313] transition-none" href="#">DASHBOARD</a>
+<a class="text-white opacity-70 hover:opacity-100 hover:bg-[#131313] transition-none" href="#">LIBRARY</a>
+<a class="text-white opacity-70 hover:opacity-100 hover:bg-[#131313] transition-none" href="#">ANALYTICS</a>
+<a class="text-[#DFFF00] border-b-[3px] border-[#DFFF00] pb-1 hover:bg-[#131313] transition-none" href="#">EXTENSION</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:bg-[#131313] p-1" data-icon="settings">settings</span>
+<span class="material-symbols-outlined cursor-pointer hover:bg-[#131313] p-1" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<div class="flex h-[calc(100vh-64px)] overflow-hidden">
+<!-- SideNavBar Shell -->
+<aside class="hidden md:flex flex-col h-full bg-[#131313] w-64 border-r-[3px] border-[#333333] divide-y-[3px] divide-[#333333] overflow-y-auto">
+<div class="p-6">
+<div class="text-[#FF4F00] font-black uppercase text-xl mb-1">CATEGORIES</div>
+<div class="font-['Space_Grotesk'] font-medium uppercase text-xs tracking-widest text-white opacity-50">OPERATIONAL_ROOT</div>
+</div>
+<div class="flex-grow">
+<div class="text-white flex items-center gap-3 px-4 py-3 hover:bg-[#1a1a1a] transition-none font-['Space_Grotesk'] font-medium uppercase text-sm tracking-widest">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span> SYSTEM
+                </div>
+<div class="text-white flex items-center gap-3 px-4 py-3 hover:bg-[#1a1a1a] transition-none font-['Space_Grotesk'] font-medium uppercase text-sm tracking-widest">
+<span class="material-symbols-outlined" data-icon="palette">palette</span> CREATIVE
+                </div>
+<div class="bg-[#DFFF00] text-black font-black flex items-center gap-3 px-4 py-3 transition-none font-['Space_Grotesk'] font-medium uppercase text-sm tracking-widest">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span> LOGIC
+                </div>
+<div class="text-white flex items-center gap-3 px-4 py-3 hover:bg-[#1a1a1a] transition-none font-['Space_Grotesk'] font-medium uppercase text-sm tracking-widest">
+<span class="material-symbols-outlined" data-icon="bug_report">bug_report</span> DEBUG
+                </div>
+<div class="text-white flex items-center gap-3 px-4 py-3 hover:bg-[#1a1a1a] transition-none font-['Space_Grotesk'] font-medium uppercase text-sm tracking-widest">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span> ARCHIVE
+                </div>
+</div>
+<div class="p-4">
+<button class="w-full bg-[#FF4F00] text-black font-black uppercase py-3 text-sm tracking-tighter brutalist-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all">
+                    NEW PROMPT
+                </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-grow overflow-y-auto bg-surface-dim p-0 md:p-8">
+<div class="max-w-3xl mx-auto bg-surface border-[3px] border-[#333333] brutalist-shadow mb-12">
+<!-- Search Module Header -->
+<div class="p-6 border-b-[3px] border-[#333333] flex justify-between items-end">
+<div>
+<h1 class="text-5xl md:text-6xl font-black uppercase tracking-tighter text-on-background leading-none">
+                            SEARCH<br/><span class="text-primary-container">PROMPTS</span>
+</h1>
+<div class="mono text-[10px] mt-4 text-outline uppercase tracking-widest opacity-60">
+                            LOCAL_DATABASE_ACCESS // v.2.04_A
+                        </div>
+</div>
+<div class="hidden md:block">
+<div class="bg-secondary-container text-black font-black px-3 py-1 text-xs tracking-widest uppercase">
+                            STATUS: READY
+                        </div>
+</div>
+</div>
+<!-- Input Zone -->
+<div class="p-6 bg-surface-container-lowest border-b-[3px] border-[#333333]">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-outline" data-icon="search">search</span>
+<input class="w-full bg-surface-container-lowest border-[2px] border-outline text-on-background mono uppercase px-12 py-4 focus:outline-none focus:border-secondary-container focus:ring-0 placeholder:opacity-30" placeholder="TYPE COMMAND OR KEYWORD..." type="text"/>
+<div class="absolute right-4 mono text-[10px] text-outline hidden md:block">
+                            [SHIFT + ENTER] TO FILTER
+                        </div>
+</div>
+</div>
+<!-- List Content (Zebra Striping) -->
+<div class="divide-y-[3px] divide-[#333333]">
+<!-- Prompt Item 1 -->
+<div class="p-6 flex flex-col md:flex-row gap-6 hover:bg-surface-container-low group transition-none">
+<div class="flex-grow space-y-3">
+<div class="flex items-center gap-3">
+<span class="bg-primary-container text-black text-[10px] font-black px-2 py-0.5 uppercase">SYSTEM</span>
+<span class="mono text-[10px] text-outline uppercase">ID: 994-ALPHA</span>
+</div>
+<div class="text-on-background font-bold uppercase text-lg leading-tight tracking-tight">
+                                ARCHITECTURAL ANALYSIS OF BRUTALIST CONCRETE STRUCTURES
+                            </div>
+<div class="mono text-xs text-on-surface-variant opacity-70 leading-relaxed max-w-xl">
+                                ACT AS A SENIOR ARCHITECTURAL ANALYST. EVALUATE THE STRUCTURAL INTEGRITY AND HISTORICAL SIGNIFICANCE OF THE PROVIDED IMAGE. FOCUS ON MASS, WEIGHT, AND MATERIAL AUTHENTICITY...
+                            </div>
+</div>
+<div class="flex md:flex-col justify-end items-end gap-2 shrink-0">
+<button class="bg-white text-black px-6 py-2 font-black uppercase text-sm border-b-4 border-r-4 border-black hover:translate-x-[2px] hover:translate-y-[2px] hover:border-b-2 hover:border-r-2 transition-all">
+                                COPY
+                            </button>
+<span class="mono text-[10px] text-outline opacity-40 uppercase">USED: 2H AGO</span>
+</div>
+</div>
+<!-- Prompt Item 2 -->
+<div class="p-6 flex flex-col md:flex-row gap-6 bg-surface-container-lowest hover:bg-surface-container-low group transition-none">
+<div class="flex-grow space-y-3">
+<div class="flex items-center gap-3">
+<span class="bg-secondary-container text-black text-[10px] font-black px-2 py-0.5 uppercase">LOGIC</span>
+<span class="mono text-[10px] text-outline uppercase">ID: 882-KAPPA</span>
+</div>
+<div class="text-on-background font-bold uppercase text-lg leading-tight tracking-tight">
+                                DEBUGGING COMPLEX REACT HOOKS FOR PERFORMANCE
+                            </div>
+<div class="mono text-xs text-on-surface-variant opacity-70 leading-relaxed max-w-xl">
+                                ANALYZE THE FOLLOWING REACT COMPONENT. IDENTIFY UNNECESSARY RE-RENDERS AND PROVIDE OPTIMIZED USEMEMO OR USECALLBACK SOLUTIONS. PRIORITIZE CLEAN CODE AND TYPE SAFETY...
+                            </div>
+</div>
+<div class="flex md:flex-col justify-end items-end gap-2 shrink-0">
+<button class="bg-white text-black px-6 py-2 font-black uppercase text-sm border-b-4 border-r-4 border-black hover:translate-x-[2px] hover:translate-y-[2px] hover:border-b-2 hover:border-r-2 transition-all">
+                                COPY
+                            </button>
+<span class="mono text-[10px] text-outline opacity-40 uppercase">USED: 4H AGO</span>
+</div>
+</div>
+<!-- Prompt Item 3 -->
+<div class="p-6 flex flex-col md:flex-row gap-6 hover:bg-surface-container-low group transition-none">
+<div class="flex-grow space-y-3">
+<div class="flex items-center gap-3">
+<span class="bg-tertiary-container text-black text-[10px] font-black px-2 py-0.5 uppercase">ARCHIVE</span>
+<span class="mono text-[10px] text-outline uppercase">ID: 441-OMEGA</span>
+</div>
+<div class="text-on-background font-bold uppercase text-lg leading-tight tracking-tight">
+                                TAILWIND CSS CONFIGURATION GENERATOR FOR DARK MODE
+                            </div>
+<div class="mono text-xs text-on-surface-variant opacity-70 leading-relaxed max-w-xl">
+                                GENERATE A COMPREHENSIVE TAILWIND.CONFIG.JS FILE BASED ON THE PROVIDED COLOR PALETTE. ENSURE DARK MODE IS ENABLED VIA CLASS AND ALL SEMANTIC TOKENS ARE MAPPED...
+                            </div>
+</div>
+<div class="flex md:flex-col justify-end items-end gap-2 shrink-0">
+<button class="bg-white text-black px-6 py-2 font-black uppercase text-sm border-b-4 border-r-4 border-black hover:translate-x-[2px] hover:translate-y-[2px] hover:border-b-2 hover:border-r-2 transition-all">
+                                COPY
+                            </button>
+<span class="mono text-[10px] text-outline opacity-40 uppercase">USED: 1D AGO</span>
+</div>
+</div>
+<!-- Prompt Item 4 -->
+<div class="p-6 flex flex-col md:flex-row gap-6 bg-surface-container-lowest hover:bg-surface-container-low group transition-none">
+<div class="flex-grow space-y-3">
+<div class="flex items-center gap-3">
+<span class="bg-primary-container text-black text-[10px] font-black px-2 py-0.5 uppercase">SYSTEM</span>
+<span class="mono text-[10px] text-outline uppercase">ID: 102-DELTA</span>
+</div>
+<div class="text-on-background font-bold uppercase text-lg leading-tight tracking-tight">
+                                DATASET CLEANING AND OUTLIER DETECTION SCRIPT
+                            </div>
+<div class="mono text-xs text-on-surface-variant opacity-70 leading-relaxed max-w-xl">
+                                WRITE A PYTHON SCRIPT USING PANDAS AND SCIPY TO IDENTIFY OUTLIERS IN A TIME-SERIES DATASET. USE THE Z-SCORE METHOD AND PLOT THE RESULTS USING MATPLOTLIB...
+                            </div>
+</div>
+<div class="flex md:flex-col justify-end items-end gap-2 shrink-0">
+<button class="bg-white text-black px-6 py-2 font-black uppercase text-sm border-b-4 border-r-4 border-black hover:translate-x-[2px] hover:translate-y-[2px] hover:border-b-2 hover:border-r-2 transition-all">
+                                COPY
+                            </button>
+<span class="mono text-[10px] text-outline opacity-40 uppercase">USED: 2D AGO</span>
+</div>
+</div>
+</div>
+<!-- Footer Status -->
+<div class="p-4 bg-surface-container-highest border-t-[3px] border-[#333333] flex justify-between items-center">
+<div class="mono text-[10px] text-on-background uppercase tracking-tighter">
+                        SHOWING 4 OF 1,024 RECORDS
+                    </div>
+<div class="flex gap-2">
+<button class="p-2 border-[2px] border-outline text-outline hover:border-secondary-container hover:text-secondary-container">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="p-2 border-[2px] border-outline text-outline hover:border-secondary-container hover:text-secondary-container">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bento Details Section -->
+<div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+<div class="col-span-1 md:col-span-2 bg-[#131313] border-[3px] border-[#333333] p-6 flex flex-col justify-between brutalist-shadow">
+<div class="text-[#FF4F00] font-black uppercase text-3xl tracking-tighter mb-4">LATEST SYSTEM ALERT</div>
+<p class="mono text-xs text-white opacity-60 uppercase mb-6 leading-relaxed">
+                        CRITICAL UPDATE DEPLOYED TO NODE_07. NEW PROMPT ENGINEERING PATTERNS DETECTED IN THE LATENT SPACE. UPDATE LOCAL CONFIGURATION TO SYNC WITH OPERATIONAL ROOT.
+                    </p>
+<div class="flex items-center gap-4">
+<span class="bg-[#DFFF00] text-black text-[10px] font-black px-3 py-1 uppercase">ACTIVE_NODE: 007</span>
+<span class="mono text-[10px] text-white opacity-40 uppercase tracking-widest">TS: 2023.10.27_14:02:11</span>
+</div>
+</div>
+<div class="col-span-1 bg-[#131313] border-[3px] border-[#333333] p-6 brutalist-shadow relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary-container opacity-5 group-hover:opacity-10 transition-opacity"></div>
+<div class="relative z-10">
+<div class="text-white font-black uppercase text-xl mb-4">USAGE METRICS</div>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between mono text-[10px] text-outline mb-1 uppercase">STORAGE_CAPACITY</div>
+<div class="h-2 bg-[#0E0E0E] w-full">
+<div class="h-full bg-[#FF4F00] w-[75%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mono text-[10px] text-outline mb-1 uppercase">API_QUOTA</div>
+<div class="h-2 bg-[#0E0E0E] w-full">
+<div class="h-full bg-[#DFFF00] w-[40%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<footer class="md:hidden fixed bottom-0 left-0 w-full bg-[#0E0E0E] border-t-[3px] border-[#333333] grid grid-cols-4 h-16 z-50">
+<button class="flex flex-col items-center justify-center text-white opacity-50">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+</button>
+<button class="flex flex-col items-center justify-center text-white opacity-50">
+<span class="material-symbols-outlined" data-icon="folder">folder</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#DFFF00] bg-[#131313]">
+<span class="material-symbols-outlined" data-icon="extension">extension</span>
+</button>
+<button class="flex flex-col items-center justify-center text-white opacity-50">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</footer>
+</body></html>

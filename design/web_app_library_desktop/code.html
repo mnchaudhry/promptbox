@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Space+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-container": "#5d6b00",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface": "#131313",
+                        "primary-container": "#ff5717",
+                        "secondary-fixed": "#d2f000",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-secondary-fixed-variant": "#414c00",
+                        "outline": "#ac897e",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "secondary-container": "#d2f000",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#842500",
+                        "outline-variant": "#5c4037",
+                        "on-tertiary": "#2f3131",
+                        "on-error": "#690005",
+                        "on-background": "#e5e2e1",
+                        "secondary": "#ffffff",
+                        "surface-container": "#201f1f",
+                        "inverse-primary": "#ad3300",
+                        "primary-fixed-dim": "#ffb59e",
+                        "inverse-surface": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "tertiary": "#c6c6c7",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-primary-fixed": "#3a0b00",
+                        "on-primary": "#5e1700",
+                        "surface-bright": "#393939",
+                        "on-surface-variant": "#e6beb2",
+                        "on-secondary-fixed": "#191e00",
+                        "on-tertiary-container": "#282a2a",
+                        "on-surface": "#e5e2e1",
+                        "surface-container-highest": "#353534",
+                        "surface-container-low": "#1c1b1b",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed": "#ffdbd0",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "error": "#ffb4ab",
+                        "background": "#131313",
+                        "on-primary-container": "#521300",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-variant": "#353534",
+                        "primary": "#ffb59e",
+                        "surface-tint": "#ffb59e",
+                        "tertiary-container": "#909191",
+                        "surface-dim": "#131313",
+                        "secondary-fixed-dim": "#b8d300",
+                        "on-secondary": "#2c3400"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
+                        "label": ["Space Grotesk", "sans-serif"],
+                        "mono": ["Space Mono", "monospace"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .brutalist-shadow {
+            box-shadow: 4px 4px 0px 0px #000000;
+        }
+        .brutalist-shadow-hover:hover {
+            box-shadow: 6px 6px 0px 0px #000000;
+            transform: translate(-2px, -2px);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0E0E0E; }
+        ::-webkit-scrollbar-thumb { background: #333333; border: 2px solid #0E0E0E; }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container overflow-hidden">
+<!-- TopNavBar -->
+<header class="bg-[#0E0E0E] dark:bg-[#0E0E0E] border-b-[3px] border-[#333333] flex justify-between items-center w-full px-6 py-4 h-16 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-[#FF4F00] tracking-[-0.04em] font-['Space_Grotesk'] uppercase">INDUSTRIAL AUTHORITY</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-white opacity-70 hover:opacity-100 font-['Space_Grotesk'] font-bold tracking-tighter uppercase transition-none" href="#">DASHBOARD</a>
+<a class="text-[#DFFF00] border-b-[3px] border-[#DFFF00] pb-1 font-['Space_Grotesk'] font-bold tracking-tighter uppercase transition-none" href="#">LIBRARY</a>
+<a class="text-white opacity-70 hover:opacity-100 font-['Space_Grotesk'] font-bold tracking-tighter uppercase transition-none" href="#">ANALYTICS</a>
+<a class="text-white opacity-70 hover:opacity-100 font-['Space_Grotesk'] font-bold tracking-tighter uppercase transition-none" href="#">EXTENSION</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<input class="bg-surface-container-lowest border-2 border-[#333333] text-white font-mono text-xs px-4 py-1.5 focus:outline-none focus:border-secondary-container w-64 transition-none" placeholder="SEARCH_SYSTEM..." type="text"/>
+</div>
+<span class="material-symbols-outlined text-white opacity-70 cursor-pointer hover:opacity-100 transition-none">settings</span>
+<span class="material-symbols-outlined text-white opacity-70 cursor-pointer hover:opacity-100 transition-none">account_circle</span>
+</div>
+</header>
+<div class="flex h-[calc(100vh-64px)] overflow-hidden">
+<!-- SideNavBar -->
+<aside class="bg-[#131313] dark:bg-[#131313] w-64 border-r-[3px] border-[#333333] flex flex-col h-full overflow-y-auto shrink-0">
+<div class="p-6 divide-y-[3px] divide-[#333333]">
+<div class="pb-6">
+<h2 class="text-[#FF4F00] font-black uppercase text-xs tracking-widest mb-1">CATEGORIES</h2>
+<p class="text-white opacity-50 text-[10px] font-mono mb-6">OPERATIONAL_ROOT</p>
+<div class="flex flex-col gap-1">
+<a class="bg-[#DFFF00] text-black font-black flex items-center gap-3 px-4 py-3 transition-none font-['Space_Grotesk'] font-medium uppercase text-sm tracking-widest" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">terminal</span>
+                            SYSTEM
+                        </a>
+<a class="text-white flex items-center gap-3 px-4 py-3 hover:bg-[#1a1a1a] transition-none font-['Space_Grotesk'] font-medium uppercase text-sm tracking-widest" href="#">
+<span class="material-symbols-outlined">palette</span>
+                            CREATIVE
+                        </a>
+<a class="text-white flex items-center gap-3 px-4 py-3 hover:bg-[#1a1a1a] transition-none font-['Space_Grotesk'] font-medium uppercase text-sm tracking-widest" href="#">
+<span class="material-symbols-outlined">psychology</span>
+                            LOGIC
+                        </a>
+<a class="text-white flex items-center gap-3 px-4 py-3 hover:bg-[#1a1a1a] transition-none font-['Space_Grotesk'] font-medium uppercase text-sm tracking-widest" href="#">
+<span class="material-symbols-outlined">bug_report</span>
+                            DEBUG
+                        </a>
+<a class="text-white flex items-center gap-3 px-4 py-3 hover:bg-[#1a1a1a] transition-none font-['Space_Grotesk'] font-medium uppercase text-sm tracking-widest" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+                            ARCHIVE
+                        </a>
+</div>
+</div>
+<div class="py-6">
+<h2 class="text-white font-black uppercase text-xs tracking-widest mb-4 opacity-50">FOLDERS</h2>
+<div class="flex flex-col gap-2">
+<button class="flex items-center justify-between text-white text-xs font-mono px-4 py-2 hover:bg-[#1a1a1a] border border-[#333333]">
+<span>CODING</span>
+<span class="opacity-30">12</span>
+</button>
+<button class="flex items-center justify-between text-white text-xs font-mono px-4 py-2 hover:bg-[#1a1a1a] border border-[#333333]">
+<span>MARKETING</span>
+<span class="opacity-30">08</span>
+</button>
+<button class="flex items-center justify-between text-white text-xs font-mono px-4 py-2 hover:bg-[#1a1a1a] border border-[#333333]">
+<span>RESEARCH</span>
+<span class="opacity-30">24</span>
+</button>
+</div>
+</div>
+<div class="pt-6 mt-auto">
+<button class="w-full bg-[#FF4F00] text-black font-black uppercase tracking-tighter py-4 brutalist-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] active:shadow-none active:translate-x-[2px] active:translate-y-[2px] transition-none">
+                        NEW PROMPT
+                    </button>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto bg-surface-dim">
+<div class="p-8">
+<!-- Dashboard Header -->
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="text-secondary-container font-mono text-sm tracking-widest uppercase">/ Root / Library / All_Prompts</span>
+<h1 class="text-7xl font-black font-headline tracking-[-0.04em] uppercase text-white leading-[0.9]">Prompt Library</h1>
+</div>
+<div class="flex gap-4">
+<div class="bg-surface-container-high border-2 border-[#333333] px-6 py-4 flex flex-col items-end">
+<span class="text-[10px] font-mono text-white opacity-50">TOTAL_RECORDS</span>
+<span class="text-2xl font-black text-secondary-container">1,402</span>
+</div>
+<div class="bg-surface-container-high border-2 border-[#333333] px-6 py-4 flex flex-col items-end">
+<span class="text-[10px] font-mono text-white opacity-50">SYSTEM_UPTIME</span>
+<span class="text-2xl font-black text-primary-container">99.8%</span>
+</div>
+</div>
+</div>
+<!-- Grid Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Card 1: Asymmetric Highlight -->
+<div class="col-span-1 md:col-span-2 bg-[#1a1a1a] border-[3px] border-[#333333] flex flex-col brutalist-shadow-hover transition-none">
+<div class="p-6 flex flex-col h-full">
+<div class="flex justify-between items-start mb-6">
+<span class="bg-secondary-container text-black px-2 py-0.5 text-[10px] font-black uppercase">FEATURED_PROTOCOL</span>
+<span class="text-white opacity-30 font-mono text-xs">ID: PRMT-001</span>
+</div>
+<h3 class="text-3xl font-black text-white uppercase mb-4 leading-tight">Advanced System Architect Reasoning</h3>
+<p class="text-white opacity-70 font-mono text-sm mb-8 line-clamp-3">
+                                "Act as an expert software architect with 20 years of experience in distributed systems. Analyze the following requirements and generate a detailed RFC document focusing on scalability and fault tolerance..."
+                            </p>
+<div class="mt-auto flex flex-wrap gap-2">
+<span class="border border-white/20 text-white/50 px-2 py-1 text-[10px] font-mono">CODING</span>
+<span class="border border-white/20 text-white/50 px-2 py-1 text-[10px] font-mono">ARCHITECTURE</span>
+<span class="border border-white/20 text-white/50 px-2 py-1 text-[10px] font-mono">SYSTEMS</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low border-[3px] border-[#333333] p-6 brutalist-shadow-hover flex flex-col transition-none">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-primary-container text-black px-2 py-0.5 text-[10px] font-black uppercase">CRITICAL</span>
+<span class="text-white opacity-30 font-mono text-xs">#82</span>
+</div>
+<h3 class="text-xl font-black text-white uppercase mb-2">Refactoring Engine</h3>
+<p class="text-white opacity-60 font-mono text-xs mb-6 line-clamp-4">
+                            "Review this legacy COBOL logic and transform it into a functional Rust implementation while maintaining 100% test coverage and strict type safety..."
+                        </p>
+<div class="mt-auto flex flex-wrap gap-2">
+<span class="border border-white/20 text-white/50 px-2 py-1 text-[10px] font-mono">DEBUG</span>
+<span class="border border-white/20 text-white/50 px-2 py-1 text-[10px] font-mono">RUST</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low border-[3px] border-[#333333] p-6 brutalist-shadow-hover flex flex-col transition-none">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-[#333333] text-white px-2 py-0.5 text-[10px] font-black uppercase">STABLE</span>
+<span class="text-white opacity-30 font-mono text-xs">#11</span>
+</div>
+<h3 class="text-xl font-black text-white uppercase mb-2">Content Strategy V4</h3>
+<p class="text-white opacity-60 font-mono text-xs mb-6 line-clamp-4">
+                            "Develop a multi-channel content strategy for a Series A fintech startup. Target audience: CTOs of mid-market enterprises. Tone: Authoritative, industrial, direct."
+                        </p>
+<div class="mt-auto flex flex-wrap gap-2">
+<span class="border border-white/20 text-white/50 px-2 py-1 text-[10px] font-mono">MARKETING</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-low border-[3px] border-[#333333] p-6 brutalist-shadow-hover flex flex-col transition-none">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-secondary-container text-black px-2 py-0.5 text-[10px] font-black uppercase">LOGIC_FLOW</span>
+<span class="text-white opacity-30 font-mono text-xs">#342</span>
+</div>
+<h3 class="text-xl font-black text-white uppercase mb-2">Market Analysis Bot</h3>
+<p class="text-white opacity-60 font-mono text-xs mb-6 line-clamp-4">
+                            "Synthesize the provided quarterly earnings reports. Extract key KPIs, identified risks, and forward-looking statements. Present in a tabular format."
+                        </p>
+<div class="mt-auto flex flex-wrap gap-2">
+<span class="border border-white/20 text-white/50 px-2 py-1 text-[10px] font-mono">RESEARCH</span>
+<span class="border border-white/20 text-white/50 px-2 py-1 text-[10px] font-mono">FINANCE</span>
+</div>
+</div>
+<!-- Card 5 (Large Visual Block) -->
+<div class="col-span-1 md:col-span-2 bg-[#000000] border-[3px] border-primary-container p-8 brutalist-shadow transition-none flex flex-row items-center gap-8">
+<div class="flex-1">
+<h3 class="text-4xl font-black text-white uppercase mb-4 tracking-tighter">System Diagnostic Prompt</h3>
+<p class="text-white opacity-80 font-mono text-sm mb-6">
+                                Run a comprehensive audit on the current AI context window. Identify hallucination risks and suggest grounding parameters based on the provided technical documentation.
+                            </p>
+<button class="bg-white text-black font-black px-6 py-2 uppercase text-xs hover:bg-secondary-container transition-none">EXECUTE_DEBUG</button>
+</div>
+<div class="w-32 h-32 bg-primary-container shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-black text-6xl" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-container-low border-[3px] border-[#333333] p-6 brutalist-shadow-hover flex flex-col transition-none">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-[#333333] text-white px-2 py-0.5 text-[10px] font-black uppercase">EXPERIMENTAL</span>
+<span class="text-white opacity-30 font-mono text-xs">#99</span>
+</div>
+<h3 class="text-xl font-black text-white uppercase mb-2">Visual Scripting Generator</h3>
+<p class="text-white opacity-60 font-mono text-xs mb-6 line-clamp-4">
+                            "Convert this pseudo-code into a visual node graph schema for Unreal Engine 5. Define all input pins and execution flow paths clearly."
+                        </p>
+<div class="mt-auto flex flex-wrap gap-2">
+<span class="border border-white/20 text-white/50 px-2 py-1 text-[10px] font-mono">CREATIVE</span>
+<span class="border border-white/20 text-white/50 px-2 py-1 text-[10px] font-mono">GAME_DEV</span>
+</div>
+</div>
+<!-- Card 7 -->
+<div class="bg-surface-container-low border-[3px] border-[#333333] p-6 brutalist-shadow-hover flex flex-col transition-none">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-[#333333] text-white px-2 py-0.5 text-[10px] font-black uppercase">ARCHIVED</span>
+<span class="text-white opacity-30 font-mono text-xs">#02</span>
+</div>
+<h3 class="text-xl font-black text-white uppercase mb-2">Legacy SEO Optimizer</h3>
+<p class="text-white opacity-60 font-mono text-xs mb-6 line-clamp-4">
+                            "Optimize the following meta descriptions for 2018 Google algorithms. Focus on keyword density and specific character counts."
+                        </p>
+<div class="mt-auto flex flex-wrap gap-2">
+<span class="border border-white/20 text-white/50 px-2 py-1 text-[10px] font-mono">MARKETING</span>
+</div>
+</div>
+</div>
+<!-- Pagination/Status Bottom Bar (Brutalist) -->
+<div class="mt-12 flex flex-col md:flex-row items-center justify-between border-[3px] border-[#333333] bg-[#0E0E0E] p-4 gap-4">
+<div class="flex items-center gap-6">
+<div class="flex gap-2">
+<button class="bg-[#DFFF00] text-black w-10 h-10 font-black border border-black transition-none">01</button>
+<button class="bg-transparent text-white w-10 h-10 font-black border border-[#333333] hover:bg-[#1a1a1a] transition-none">02</button>
+<button class="bg-transparent text-white w-10 h-10 font-black border border-[#333333] hover:bg-[#1a1a1a] transition-none">03</button>
+<button class="bg-transparent text-white w-10 h-10 font-black border border-[#333333] hover:bg-[#1a1a1a] transition-none">...</button>
+</div>
+<span class="text-[10px] font-mono text-white opacity-50 uppercase tracking-widest">SHOWING 08 OF 1402 ENTRIES</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 bg-secondary-container"></div>
+<span class="text-[10px] font-mono text-white uppercase">Sync_Online</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 bg-primary-container"></div>
+<span class="text-[10px] font-mono text-white uppercase">Encrypted_Session</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Floating Action Element (Suppress per context check if not relevant, but user might want it for quick prompt) -->
+<button class="fixed bottom-8 right-8 bg-[#DFFF00] text-black w-16 h-16 brutalist-shadow active:shadow-none active:translate-x-[4px] active:translate-y-[4px] flex items-center justify-center transition-none z-50">
+<span class="material-symbols-outlined text-3xl font-black">add</span>
+</button>
+</body></html>

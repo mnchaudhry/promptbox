@@ -1,0 +1,22 @@
+{
+  "name": "promptly",
+  "private": true,
+  "packageManager": "pnpm@10.18.3",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "deploy": "turbo deploy",
+    "clean": "turbo clean"
+  },
+  "devDependencies": {
+    "turbo": "latest",
+    "eslint": "^9",
+    "eslint-config-next": "latest"
+  }
+}

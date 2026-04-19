@@ -1,0 +1,113 @@
+
+<style>
+  .root { padding: 1.5rem 0; font-family: var(--font-sans); }
+  .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-tertiary); margin: 0 0 10px; }
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 10px; }
+  .card-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 4px; }
+  .card-sub { font-size: 13px; color: var(--color-text-secondary); margin: 0; line-height: 1.6; }
+  .badge { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 20px; font-weight: 500; margin-right: 6px; margin-bottom: 4px; }
+  .b-purple { background: #EEEDFE; color: #3C3489; }
+  .b-teal { background: #E1F5EE; color: #0F6E56; }
+  .b-amber { background: #FAEEDA; color: #854F0B; }
+  .b-coral { background: #FAECE7; color: #993C1D; }
+  .b-blue { background: #E6F1FB; color: #185FA5; }
+  .b-gray { background: #F1EFE8; color: #5F5E5A; }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 10px; }
+  .stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin-bottom: 10px; }
+  .stack-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 14px; }
+  .stack-card .s-title { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); margin: 0 0 2px; }
+  .stack-card .s-val { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin: 0; }
+  .palette-row { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+  .swatch { width: 48px; height: 48px; border-radius: var(--border-radius-md); display: flex; align-items: flex-end; padding: 4px; }
+  .swatch span { font-size: 9px; font-weight: 500; opacity: 0.7; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 1.5rem 0; }
+  .us-row { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .us-row:last-child { border-bottom: none; }
+  .us-num { font-size: 12px; font-weight: 500; color: var(--color-text-tertiary); min-width: 24px; }
+  .us-text { font-size: 13px; color: var(--color-text-primary); line-height: 1.6; }
+  .us-tag { font-size: 11px; color: var(--color-text-secondary); margin-left: 4px; }
+</style>
+
+<div class="root">
+  <p class="section-label">User stories</p>
+
+  <div class="card">
+    <p class="card-title">Core — Saving</p>
+    <div class="us-row"><span class="us-num">US1</span><span class="us-text">Save any selected text as a prompt with 1 click from the browser extension <span class="us-tag">· extension</span></span></div>
+    <div class="us-row"><span class="us-num">US2</span><span class="us-text">Add a title, tags, and optional note before saving <span class="us-tag">· extension + web</span></span></div>
+    <div class="us-row"><span class="us-num">US3</span><span class="us-text">Copy prompt to clipboard instantly without opening the web app <span class="us-tag">· extension</span></span></div>
+    <div class="us-row"><span class="us-num">US4</span><span class="us-text">Paste a prompt manually (not just selected text) via the extension popup <span class="us-tag">· extension</span></span></div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Core — Browsing & Search</p>
+    <div class="us-row"><span class="us-num">US5</span><span class="us-text">Search prompts by keyword across title, body, and tags <span class="us-tag">· web</span></span></div>
+    <div class="us-row"><span class="us-num">US6</span><span class="us-text">Filter prompts by tag or category <span class="us-tag">· web + extension</span></span></div>
+    <div class="us-row"><span class="us-num">US7</span><span class="us-text">Browse recent prompts in the extension popup without going to the web app <span class="us-tag">· extension</span></span></div>
+    <div class="us-row"><span class="us-num">US8</span><span class="us-text">Sort by newest, most used, or alphabetical <span class="us-tag">· web</span></span></div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Core — Management</p>
+    <div class="us-row"><span class="us-num">US9</span><span class="us-text">Edit a saved prompt's title, body, and tags <span class="us-tag">· web</span></span></div>
+    <div class="us-row"><span class="us-num">US10</span><span class="us-text">Delete a prompt with undo (trash + 5s undo) <span class="us-tag">· web</span></span></div>
+    <div class="us-row"><span class="us-num">US11</span><span class="us-text">Organize prompts into folders or collections <span class="us-tag">· web</span></span></div>
+    <div class="us-row"><span class="us-num">US12</span><span class="us-text">Export all prompts as JSON or Markdown <span class="us-tag">· web</span></span></div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Auth & Sync</p>
+    <div class="us-row"><span class="us-num">US13</span><span class="us-text">Sign up / log in with Google (no passwords) <span class="us-tag">· web + extension</span></span></div>
+    <div class="us-row"><span class="us-num">US14</span><span class="us-text">Prompts sync in real-time between extension and web app <span class="us-tag">· both</span></span></div>
+    <div class="us-row"><span class="us-num">US15</span><span class="us-text">Work offline in extension; sync when back online <span class="us-tag">· extension</span></span></div>
+  </div>
+
+  <hr class="divider">
+  <p class="section-label">Tech stack</p>
+
+  <div class="stack-grid">
+    <div class="stack-card"><p class="s-title">Web App</p><p class="s-val">Next.js 14 (App Router)</p></div>
+    <div class="stack-card"><p class="s-title">Extension</p><p class="s-val">Plasmo Framework</p></div>
+    <div class="stack-card"><p class="s-title">Styling</p><p class="s-val">Tailwind CSS + shadcn/ui</p></div>
+    <div class="stack-card"><p class="s-title">Auth</p><p class="s-val">Clerk (Google OAuth)</p></div>
+    <div class="stack-card"><p class="s-title">Database</p><p class="s-val">Supabase (Postgres)</p></div>
+    <div class="stack-card"><p class="s-title">State</p><p class="s-val">Zustand + React Query</p></div>
+    <div class="stack-card"><p class="s-title">Hosting</p><p class="s-val">Vercel</p></div>
+    <div class="stack-card"><p class="s-title">Search</p><p class="s-val">Supabase full-text search</p></div>
+  </div>
+
+  <hr class="divider">
+  <p class="section-label">Color palette — "Ink & Mist"</p>
+
+  <div class="palette-row">
+    <div class="swatch" style="background:#1A1A2E;"><span style="color:#9090b0; font-size:9px;">Void</span></div>
+    <div class="swatch" style="background:#16213E;"><span style="color:#7070a0; font-size:9px;">Deep</span></div>
+    <div class="swatch" style="background:#0F3460;"><span style="color:#6090c0; font-size:9px;">Navy</span></div>
+    <div class="swatch" style="background:#533483;"><span style="color:#c0a0e0; font-size:9px;">Plum</span></div>
+    <div class="swatch" style="background:#7F77DD;"><span style="color:#e0deff; font-size:9px;">Iris</span></div>
+    <div class="swatch" style="background:#AFA9EC;"><span style="color:#534AB7; font-size:9px;">Lavender</span></div>
+    <div class="swatch" style="background:#E8E6FF;"><span style="color:#534AB7; font-size:9px;">Mist</span></div>
+    <div class="swatch" style="background:#1D9E75;"><span style="color:#9FE1CB; font-size:9px;">Accent</span></div>
+    <div class="swatch" style="background:#F5F4FF; border: 0.5px solid #dddaf5;"><span style="color:#534AB7; font-size:9px;">Surface</span></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card" style="border-left: 3px solid #7F77DD; border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0;">
+      <p class="card-title">Primary ramp — Iris Purple</p>
+      <p class="card-sub">CTAs, active states, badges, tag pills. Feels premium without being aggressive.</p>
+    </div>
+    <div class="card" style="border-left: 3px solid #1D9E75; border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0;">
+      <p class="card-title">Accent — Teal</p>
+      <p class="card-sub">Copy button, success states, "saved" flash. Single accent keeps it clean.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <p class="section-label">Effort estimate</p>
+  <div class="stack-grid">
+    <div class="stack-card"><p class="s-title">Web MVP</p><p class="s-val">~3–4 days</p></div>
+    <div class="stack-card"><p class="s-title">Extension</p><p class="s-val">~2 days</p></div>
+    <div class="stack-card"><p class="s-title">Auth + DB</p><p class="s-val">~1 day</p></div>
+    <div class="stack-card"><p class="s-title">Total solo</p><p class="s-val">~1 week</p></div>
+  </div>
+</div>
