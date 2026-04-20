@@ -3,6 +3,7 @@ import { Button } from "@promptbox/ui";
 import { ArrowRight, Zap, Target, Shield } from "lucide-react";
 import { auth } from "@clerk/nextjs/server";
 import { UserButton } from "@clerk/nextjs";
+import Logo from "@/components/logo";
 
 export default async function LandingPage() {
   const { userId } = await auth();
@@ -11,14 +12,7 @@ export default async function LandingPage() {
     <div className="flex-1 flex flex-col bg-background selection:bg-secondary selection:text-black">
       {/* Navigation */}
       <nav className="flex items-center justify-between p-6 max-w-7xl mx-auto w-full border-b-3 border-outline">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-primary rounded-none flex items-center justify-center border-2 border-black shadow-brutalist-orange">
-            <span className="text-black font-black text-xl">P</span>
-          </div>
-          <h1 className="text-xl font-bold uppercase tracking-tighter">
-            promptbox<span className="text-primary">.</span>
-          </h1>
-        </div>
+        <Logo url='/' />
         <div className="flex items-center gap-8 font-mono text-xs uppercase tracking-widest text-highest">
           {userId ? (
             <>
@@ -111,9 +105,9 @@ export default async function LandingPage() {
         {/* Extension Teaser */}
         <section className="w-full py-60 px-6 flex flex-col items-center justify-center text-center space-y-12 bg-linear-to-b from-background to-surface">
           <div className="border-4 border-white p-1 shadow-brutalist-white">
-             <div className="bg-white text-black px-8 py-3 font-black uppercase tracking-widest text-lg">
-               Browser Extension
-             </div>
+            <div className="bg-white text-black px-8 py-3 font-black uppercase tracking-widest text-lg">
+              Browser Extension
+            </div>
           </div>
           <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter max-w-5xl leading-[0.9]">
             Save from <span className="text-secondary">anywhere.</span>

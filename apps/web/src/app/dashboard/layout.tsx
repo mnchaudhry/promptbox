@@ -5,6 +5,7 @@ import Link from "next/link";
 import { UserButton } from "@clerk/nextjs";
 import { Download } from "lucide-react";
 import { DashboardNav } from "@/components/DashboardNav";
+import Logo from "@/components/logo";
 
 export default function DashboardLayout({ children, }: { children: React.ReactNode; }) {
   return (
@@ -13,14 +14,7 @@ export default function DashboardLayout({ children, }: { children: React.ReactNo
       <aside className="w-64 border-r-3 border-outline flex flex-col h-full overflow-hidden shrink-0">
         {/* Brand */}
         <div className="p-6 border-b-3 border-outline">
-          <Link href="/dashboard" className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-primary rounded-none flex items-center justify-center border-2 border-black shadow-brutalist-orange shrink-0">
-              <span className="text-black font-black text-xl">P</span>
-            </div>
-            <h2 className="text-xl font-bold uppercase tracking-tighter">
-              promptbox<span className="text-primary">.</span>
-            </h2>
-          </Link>
+          <Logo />
           <div className="mt-2 font-mono text-[10px] text-highest uppercase tracking-widest">
             Your Toolbox
           </div>
