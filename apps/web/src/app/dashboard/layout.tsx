@@ -48,7 +48,7 @@ export default function DashboardLayout({ children, }: { children: React.ReactNo
           <div className="w-full">
             <UserButton showName appearance={{
               elements: {
-                userButtonTrigger: "w-full !flex !flex-row items-center justify-start h-14 p-4 !bg-white border-2 border-black rounded-none shadow-[4px_4px_0px_0px_white] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all",
+                userButtonTrigger: "w-full !flex !flex-row items-center justify-start h-14 p-4 !bg-secondary border-2 border-black rounded-none shadow-[4px_4px_0px_0px_white] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all",
                 userButtonBox: "!flex !flex-row items-center gap-4 !w-full !max-w-none",
                 userButtonAvatarBox: "!-order-1 rounded-none border-2 border-black w-7 h-7 shrink-0",
                 userButtonOuterIdentifier: "font-mono text-[11px] uppercase font-black !text-black !opacity-100 tracking-widest",

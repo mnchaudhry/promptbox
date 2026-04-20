@@ -137,13 +137,14 @@ button {
   display: none !important;
 }
 
+/* Profile Button in sidebar start */
 .cl-userButtonPopoverMain,
 .cl-userButtonPopoverActionButton {
-  color: white !important;
+  color: var(--color-secondary) !important;
 }
 
 .cl-userPreviewSecondaryIdentifier__userButton {
-  color: #fafafa !important;
+  color: var(--color-secondary) !important;
 }
 
 .cl-userButton-root {
@@ -158,3 +159,221 @@ button {
 .cl-userButtonOuterIdentifier {
   font-size: 14px !important;
 }
+
+/* Profile Button in sidebar end */
+
+
+/* Manage account modal start */
+/* close button in modal */
+.cl-modalCloseButton,
+/* identity preview text in otp modal */
+.cl-identityPreviewText,
+/* form label */
+.cl-formFieldLabel,
+/* Badge text */
+.cl-badge,
+/* Account text in sidebar */
+.cl-internal-zrq2ci,
+/* 'Manage your account info.' text in sidebar */
+.cl-internal-qv6w63 {
+  color: white !important;
+}
+
+
+/* Security text in sidebar */
+.cl-navbarButtonText,
+/* Security icon in sidebar */
+.cl-navbarButtonIcon,
+/* User name */
+.cl-userPreviewMainIdentifierText,
+/* User email */
+.cl-internal-1e3yq52,
+/* 'Google' text in google icon */
+.cl-internal-s2yahh,
+/* email in google section */
+.cl-internal-fxxet5 {
+  color: var(--color-highest) !important;
+
+}
+
+/* radio label in form */
+.cl-formFieldRadioLabelTitle,
+/* radio description in form */
+.cl-formFieldRadioLabelDescription {
+  color: #aaaaaa !important;
+}
+
+/* device name title */
+.cl-internal-rppsgi,
+/* form field correct data entry in form */
+.cl-formFieldSuccessText {
+  color: var(--color-secondary) !important;
+}
+
+/* DEVELOPMENT MODE text remove */
+.cl-internal-dt53uo {
+  display: none !important;
+}
+
+/* User Profile Modal Overall Overhaul */
+.cl-userProfile-root {
+  background-color: var(--color-background) !important;
+  border-radius: 0px !important;
+  font-family: var(--font-sans) !important;
+  border: 4px solid var(--color-outline) !important;
+  box-shadow: 20px 20px 0px 0px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Sidebar Navigation - The Navigation Panel */
+.cl-userProfile-navbar {
+  background-color: #0c0c0c !important;
+  background-image:
+    linear-gradient(rgba(255, 79, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 79, 0, 0.05) 1px, transparent 1px) !important;
+  background-size: 10px 10px !important;
+  border-right: 4px solid var(--color-outline) !important;
+  padding: 60px 24px !important;
+  width: 300px !important;
+  position: relative !important;
+}
+
+.cl-userProfile-navbar::after {
+  content: "NAV_SYSTEM_v1.0";
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  color: var(--color-outline);
+  letter-spacing: 2px;
+}
+
+.cl-userProfile-navbarTitle {
+  display: none !important;
+}
+
+.cl-userProfile-navbarButton {
+  border: 2px solid var(--color-outline) !important;
+  margin-bottom: 20px !important;
+  padding: 20px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.2em !important;
+  font-family: var(--font-mono) !important;
+  font-size: 10px !important;
+  font-weight: 900 !important;
+  color: white !important;
+  background-color: black !important;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.cl-userProfile-navbarButton::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--color-primary);
+  transform: translateX(-100%);
+  transition: transform 0.2s ease !important;
+}
+
+.cl-userProfile-navbarButton:hover::before {
+  transform: translateX(0);
+}
+
+.cl-userProfile-navbarButton:hover {
+  border-color: var(--color-primary) !important;
+  color: var(--color-primary) !important;
+  padding-left: 30px !important;
+}
+
+.cl-userProfile-navbarButton[data-active="true"] {
+  background-color: var(--color-primary) !important;
+  color: black !important;
+  border: 2px solid black !important;
+  box-shadow: 6px 6px 0px 0px black !important;
+}
+
+.cl-userProfile-navbarButton[data-active="true"]::before {
+  display: none !important;
+}
+
+/* Content Area - Focus on schematic look */
+.cl-userProfile-scrollBox {
+  background-color: #060606 !important;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px) !important;
+  background-size: 40px 40px !important;
+  padding: 0 !important;
+}
+
+.cl-userProfile-page {
+  padding: 80px !important;
+  max-width: 900px !important;
+}
+
+/* Section Modifiers */
+.cl-profileSection {
+  background-color: rgba(20, 20, 20, 0.8) !important;
+  backdrop-filter: blur(5px) !important;
+  border: 1px solid var(--color-outline) !important;
+  padding: 50px !important;
+  transition: all 0.3s ease !important;
+}
+
+.cl-profileSection:hover {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0px 0px 30px 0px rgba(255, 79, 0, 0.1) !important;
+}
+
+.cl-profileSectionTitle {
+  transform: rotate(-1deg) !important;
+}
+
+.cl-headerTitle {
+  font-size: 32px !important;
+  letter-spacing: 0.1em !important;
+  background: none !important;
+  -webkit-text-fill-color: white !important;
+  border-left: 8px solid var(--color-primary) !important;
+  padding-left: 20px !important;
+}
+
+.cl-headerSubtitle {
+  margin-left: 28px !important;
+  letter-spacing: 1px !important;
+  color: var(--color-highest) !important;
+}
+
+/* Avatar - The User Chip */
+.cl-userProfileAvatarBox {
+  background: black !important;
+  border: 3px solid var(--color-outline) !important;
+  box-shadow: 8px 8px 0px 0px black !important;
+  transition: all 0.3s ease !important;
+}
+
+.cl-userProfileAvatarBox:hover {
+  border-color: var(--color-primary) !important;
+  transform: scale(1.05);
+}
+
+/* Modal UI enhancements */
+.cl-modalCloseButton {
+  border: 2px solid white !important;
+  background: transparent !important;
+  opacity: 0.5 !important;
+}
+
+.cl-modalCloseButton:hover {
+  opacity: 1 !important;
+  background: white !important;
+  color: black !important;
+}
+
+
+/* Manage account modal end */
