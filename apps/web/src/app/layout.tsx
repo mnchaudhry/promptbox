@@ -27,6 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider
+      domain={process.env.NODE_ENV === "production" ? "promptbox.opstintechnologies.com" : undefined}
       appearance={{
         baseTheme: dark,
         variables: {
