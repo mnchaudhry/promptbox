@@ -1,69 +1,151 @@
-"use client";
+import Link from "next/link";
+import { Button } from "@promptbox/ui";
+import { ArrowRight, Zap, Target, Shield } from "lucide-react";
+import { auth } from "@clerk/nextjs/server";
+import { UserButton } from "@clerk/nextjs";
 
-import { useState } from "react";
-import { Button, Card, CardContent, CardHeader, CardTitle, Input } from "@promptly/ui";
-import { CreatePromptModal } from "@/components/CreatePromptModal";
+export default async function LandingPage() {
+  const { userId } = await auth();
 
-export default function Dashboard() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <div className="flex-1 flex flex-col p-8 space-y-12 max-w-7xl mx-auto w-full">
-      {/* Header Section */}
-      <header className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-        <div className="space-y-2">
-          <h1 className="text-6xl font-bold uppercase tracking-tightest leading-none">
-            Gallery<span className="text-primary">.</span>
+    <div className="flex-1 flex flex-col bg-background selection:bg-secondary selection:text-black">
+      {/* Navigation */}
+      <nav className="flex items-center justify-between p-6 max-w-7xl mx-auto w-full border-b-3 border-outline">
+        <div className="flex items-center gap-2">
+          <h1 className="text-xl font-bold uppercase tracking-tighter">
+            promptbox<span className="text-primary">.</span>
           </h1>
-          <p className="font-mono text-highest uppercase text-sm tracking-widest">
-            32 Prompts Synced // Active Session
-          </p>
         </div>
-        
-        <div className="flex gap-4">
-          <Input 
-            placeholder="SEARCH_BY_TAG_OR_TITLE..." 
-            className="md:w-80"
-          />
-          <Button variant="secondary" onClick={() => setIsModalOpen(true)}>
-            + New_Prompt
-          </Button>
+        <div className="flex items-center gap-8 font-mono text-xs uppercase tracking-widest text-highest">
+          {userId ? (
+            <>
+              <Link href="/dashboard" className="hover:text-primary transition-colors">Home</Link>
+              <UserButton />
+            </>
+          ) : (
+            <Link href="/sign-in">
+              <Button variant="secondary" className="px-6">Sign In</Button>
+            </Link>
+          )}
         </div>
-      </header>
-
-      {/* Folders/Filters */}
-      <nav className="flex flex-wrap gap-3">
-        {["All_Prompts", "Marketing", "Code_Gen", "Copywriting", "Creative"].map((tab) => (
-          <button 
-            key={tab}
-            className="px-4 py-2 border-3 border-outline font-mono text-xs uppercase hover:border-secondary transition-colors"
-          >
-            {tab}
-          </button>
-        ))}
       </nav>
 
-      {/* Main Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {[1, 2, 3, 4, 5, 6].map((i) => (
-          <Card key={i} className="hover:shadow-brutalist-orange transition-shadow group">
-            <CardHeader>
-              <div className="flex justify-between items-start">
-                <CardTitle>Prompt_Ref_{i}</CardTitle>
-                <div className="bg-outline px-2 py-0.5 font-mono text-[10px]">#TAG</div>
-              </div>
-            </CardHeader>
-            <CardContent className="line-clamp-4">
-              "Create a high-performance brutalist design system for a browser extension using Tailwind CSS and Next.js. Focus on 0px border radius and 3px strokes..."
-            </CardContent>
-            <div className="flex justify-between items-center pt-4 border-t-3 border-outline mt-auto">
-              <span className="text-[10px] font-mono text-highest">2026-04-19</span>
-              <Button variant="outline" className="h-8 px-3 text-[10px]">Edit</Button>
+      {/* Hero Section */}
+      <main className="flex-1 flex flex-col items-center">
+        {/* Welcome Section */}
+        <section className="w-full flex flex-col items-center justify-center text-center px-6 pt-20 pb-40 md:pb-60 md:pt-30 space-y-12 max-w-5xl mx-auto">
+          <div className="space-y-8">
+            <div className="inline-block bg-primary text-black px-4 py-1.5 font-mono text-[11px] font-black uppercase tracking-widest border-2 border-black shadow-brutalist">
+              VERSION 1.0 // STABLE
             </div>
-          </Card>
-        ))}
-      </div>
+            <h2 className="text-5xl md:text-8xl font-bold uppercase tracking-tightest leading-[0.85] text-white">
+              Simply your <br />
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-white to-secondary">Best Prompt Saver.</span>
+            </h2>
+            <p className="max-w-2xl mx-auto text-xl text-highest font-mono uppercase tracking-tight leading-relaxed">
+              The only vault you&apos;ll ever need to store, sync, and access your best prompts instantly.
+            </p>
+          </div>
 
-      <CreatePromptModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+          <div className="flex flex-col md:flex-row gap-6">
+            <Link href="/dashboard">
+              <Button size="lg" className="px-12 py-8 text-lg group bg-primary hover:bg-white hover:text-black border-4 border-black shadow-brutalist transition-all">
+                Access Your Vault <ArrowRight className="ml-4 w-6 h-6 group-hover:translate-x-2 transition-transform" />
+              </Button>
+            </Link>
+            <Link href="https://github.com/mnchaudhry/promptbox">
+              <Button variant="outline" size="lg" className="px-12 py-8 text-lg border-4 border-outline hover:border-white transition-all">
+                GitHub Repository
+              </Button>
+            </Link>
+          </div>
+        </section>
+
+        {/* Feature Grid - The Foundation */}
+        <section className="w-full bg-surface border-y-4 border-outline">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 divide-y-4 md:divide-y-0 md:divide-x-4 divide-outline">
+            <div className="p-12 space-y-4 hover:bg-primary/5 transition-colors group">
+              <div className="w-12 h-12 bg-white flex items-center justify-center border-3 border-black group-hover:bg-primary group-hover:text-white transition-colors">
+                <Zap className="w-6 h-6 text-black group-hover:text-white" />
+              </div>
+              <h3 className="text-2xl font-black uppercase tracking-tighter">Fast Access</h3>
+              <p className="text-highest font-mono text-sm uppercase leading-relaxed">
+                Retrieve any prompt in milliseconds. Built for speed and high-intensity workflows.
+              </p>
+            </div>
+            <div className="p-12 space-y-4 hover:bg-secondary/5 transition-colors group">
+              <div className="w-12 h-12 bg-white flex items-center justify-center border-3 border-black group-hover:bg-secondary group-hover:text-white transition-colors">
+                <Target className="w-6 h-6 text-black group-hover:text-white" />
+              </div>
+              <h3 className="text-2xl font-black uppercase tracking-tighter">Smart Sorting</h3>
+              <p className="text-highest font-mono text-sm uppercase leading-relaxed">
+                Assign labels and categories to everything. Keep your creative tools organized and ready.
+              </p>
+            </div>
+            <div className="p-12 space-y-4 hover:bg-white/5 transition-colors group">
+              <div className="w-12 h-12 bg-white flex items-center justify-center border-3 border-black group-hover:bg-white group-hover:text-black transition-colors">
+                <Shield className="w-6 h-6 text-black" />
+              </div>
+              <h3 className="text-2xl font-black uppercase tracking-tighter">Private Vault</h3>
+              <p className="text-highest font-mono text-sm uppercase leading-relaxed">
+                Your prompts are yours alone. Secured with industry-standard encryption and logic.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Scanning Marquee */}
+        <section className="w-full bg-black py-4 border-b-4 border-outline overflow-hidden whitespace-nowrap">
+          <div className="flex animate-marquee gap-20">
+            {[...Array(6)].map((_, i) => (
+              <span key={i} className="text-primary font-mono text-[10px] uppercase font-bold tracking-[0.3em]">
+                SCANNING VAULT // ENCRYPTED STORAGE // INSTANT ACCESS // SYNCING...
+              </span>
+            ))}
+          </div>
+        </section>
+
+        {/* Extension Teaser */}
+        <section className="w-full py-60 px-6 flex flex-col items-center justify-center text-center space-y-12 bg-linear-to-b from-background to-surface">
+          <div className="border-4 border-white p-1 shadow-brutalist-white">
+             <div className="bg-white text-black px-8 py-3 font-black uppercase tracking-widest text-lg">
+               Universal Extension
+             </div>
+          </div>
+          <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter max-w-5xl leading-[0.9]">
+            Save stuff from <span className="text-secondary">anywhere.</span>
+          </h2>
+          <p className="max-w-xl text-highest font-mono uppercase tracking-tight text-sm leading-relaxed">
+            One hotkey. One click. Your current text selection is instantly committed to your vault and synced across all your devices.
+          </p>
+          <div className="pt-10">
+            <Link href="/dashboard/install">
+              <Button variant="secondary" className="px-10 py-6 border-4 border-black text-black">
+                Install Extension
+              </Button>
+            </Link>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="p-12 border-t-4 border-outline bg-surface-lowest">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="flex items-center gap-2">
+            <h2 className="text-2xl font-black uppercase tracking-tighter">
+              promptbox<span className="text-primary">.</span>
+            </h2>
+          </div>
+          <p className="font-mono text-[10px] text-highest uppercase tracking-widest opacity-50">
+            © 2026 promptbox // PROMPTS ARE ASSETS // MNCHAUDHRY
+          </p>
+          <div className="flex gap-8 font-mono text-[10px] uppercase tracking-widest text-highest">
+            <Link href="#" className="hover:text-primary">Privacy</Link>
+            <Link href="#" className="hover:text-primary">Terms</Link>
+            <Link href="#" className="hover:text-primary">System</Link>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 {
   "name": "extension",
-  "displayName": "Promptly",
+  "displayName": "promptbox",
   "version": "0.0.1",
-  "description": "Industrial Authority Prompt Saver",
-  "author": "Promptly Team",
+  "description": "Save your AI instructions easily",
+  "author": "promptbox Team",
   "packageManager": "npm@10.9.2",
   "scripts": {
     "dev": "plasmo dev",
@@ -14,8 +14,8 @@
     "deploy": "echo 'Deploying extension bits...'"
   },
   "dependencies": {
-    "@promptly/ui": "workspace:*",
-    "@promptly/shared": "workspace:*",
+    "@promptbox/ui": "workspace:*",
+    "@promptbox/shared": "workspace:*",
     "plasmo": "0.90.5",
     "react": "18.3.1",
     "react-dom": "18.3.1"

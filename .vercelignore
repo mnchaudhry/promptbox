@@ -1,0 +1,15 @@
+node_modules
+.pnpm-store
+.next
+.turbo
+build
+dist
+out
+.plasmo
+.npm-cache
+.npm-cache-new
+.vercel
+.vercel_config
+*.log
+.env*
+! .env.example

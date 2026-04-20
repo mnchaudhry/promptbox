@@ -1,5 +1,5 @@
 {
-  "name": "@promptly/ui",
+  "name": "@promptbox/ui",
   "version": "0.0.0",
   "private": true,
   "main": "./src/index.ts",

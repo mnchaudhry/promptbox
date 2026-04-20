@@ -21,7 +21,7 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
       <div
         ref={ref}
         className={cn(
-          "border-3 p-6 flex flex-col space-y-4",
+          "border-3 p-5 flex flex-col space-y-3",
           variants[variant],
           className
         )}
@@ -37,7 +37,7 @@ export const CardHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDiv
 );
 
 export const CardTitle = ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-  <h3 className={cn("text-xl font-bold uppercase tracking-tighter text-primary", className)} {...props} />
+  <h3 className={cn("text-lg font-bold uppercase tracking-tighter text-primary", className)} {...props} />
 );
 
 export const CardContent = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (

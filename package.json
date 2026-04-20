@@ -1,7 +1,10 @@
 {
-  "name": "promptly",
+  "name": "promptbox",
   "private": true,
   "packageManager": "pnpm@10.18.3",
+  "engines": {
+    "node": "22.x"
+  },
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -17,6 +20,9 @@
   "devDependencies": {
     "turbo": "latest",
     "eslint": "^9",
-    "eslint-config-next": "latest"
+    "eslint-config-next": "latest",
+    "next": "16.2.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
   }
 }
