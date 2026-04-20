@@ -8,7 +8,7 @@
   --color-surface-container-high: #1A1A1A;
   --color-surface-container-highest: #262626;
   --color-highest: #888888;
-  
+
   --color-primary: #FF4F00;
   --color-secondary: #DFFF00;
   --color-outline: #333333;
@@ -32,8 +32,13 @@
   --border-width-3: 3px;
 
   @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
   }
 }
 
@@ -45,6 +50,7 @@
   * {
     @apply border-outline;
   }
+
   body {
     @apply bg-background text-white font-sans;
   }
@@ -126,6 +132,29 @@ button {
 }
 
 /* Fix for the "Secured by Clerk" banner area */
-.cl-internal-ph726s { /* specific internal selector for some versions */
+.cl-internal-ph726s {
+  /* specific internal selector for some versions */
   display: none !important;
+}
+
+.cl-userButtonPopoverMain,
+.cl-userButtonPopoverActionButton {
+  color: white !important;
+}
+
+.cl-userPreviewSecondaryIdentifier__userButton {
+  color: #fafafa !important;
+}
+
+.cl-userButton-root {
+  width: 100% !important;
+}
+
+.cl-userButtonTrigger {
+  width: 100% !important;
+  padding: 8px 0px !important;
+}
+
+.cl-userButtonOuterIdentifier {
+  font-size: 14px !important;
 }

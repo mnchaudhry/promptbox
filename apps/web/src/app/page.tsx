@@ -11,7 +11,10 @@ export default async function LandingPage() {
     <div className="flex-1 flex flex-col bg-background selection:bg-secondary selection:text-black">
       {/* Navigation */}
       <nav className="flex items-center justify-between p-6 max-w-7xl mx-auto w-full border-b-3 border-outline">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 bg-primary rounded-none flex items-center justify-center border-2 border-black shadow-brutalist-orange">
+            <span className="text-black font-black text-xl">P</span>
+          </div>
           <h1 className="text-xl font-bold uppercase tracking-tighter">
             promptbox<span className="text-primary">.</span>
           </h1>
@@ -39,23 +42,23 @@ export default async function LandingPage() {
               VERSION 1.0 // STABLE
             </div>
             <h2 className="text-5xl md:text-8xl font-bold uppercase tracking-tightest leading-[0.85] text-white">
-              Simply your <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-white to-secondary">Best Prompt Saver.</span>
+              Save your <br />
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-white to-secondary">best prompts.</span>
             </h2>
             <p className="max-w-2xl mx-auto text-xl text-highest font-mono uppercase tracking-tight leading-relaxed">
-              The only vault you&apos;ll ever need to store, sync, and access your best prompts instantly.
+              One place to store, sync, and find your prompts instantly.
             </p>
           </div>
 
           <div className="flex flex-col md:flex-row gap-6">
             <Link href="/dashboard">
               <Button size="lg" className="px-12 py-8 text-lg group bg-primary hover:bg-white hover:text-black border-4 border-black shadow-brutalist transition-all">
-                Access Your Vault <ArrowRight className="ml-4 w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                Open Your Vault <ArrowRight className="ml-4 w-6 h-6 group-hover:translate-x-2 transition-transform" />
               </Button>
             </Link>
             <Link href="https://github.com/mnchaudhry/promptbox">
               <Button variant="outline" size="lg" className="px-12 py-8 text-lg border-4 border-outline hover:border-white transition-all">
-                GitHub Repository
+                Get Code
               </Button>
             </Link>
           </div>
@@ -70,25 +73,25 @@ export default async function LandingPage() {
               </div>
               <h3 className="text-2xl font-black uppercase tracking-tighter">Fast Access</h3>
               <p className="text-highest font-mono text-sm uppercase leading-relaxed">
-                Retrieve any prompt in milliseconds. Built for speed and high-intensity workflows.
+                Find any prompt in seconds. Built for people who work fast.
               </p>
             </div>
             <div className="p-12 space-y-4 hover:bg-secondary/5 transition-colors group">
               <div className="w-12 h-12 bg-white flex items-center justify-center border-3 border-black group-hover:bg-secondary group-hover:text-white transition-colors">
                 <Target className="w-6 h-6 text-black group-hover:text-white" />
               </div>
-              <h3 className="text-2xl font-black uppercase tracking-tighter">Smart Sorting</h3>
+              <h3 className="text-2xl font-black uppercase tracking-tighter">Easy Sorting</h3>
               <p className="text-highest font-mono text-sm uppercase leading-relaxed">
-                Assign labels and categories to everything. Keep your creative tools organized and ready.
+                Add tags to keep everything clean and easy to find.
               </p>
             </div>
             <div className="p-12 space-y-4 hover:bg-white/5 transition-colors group">
               <div className="w-12 h-12 bg-white flex items-center justify-center border-3 border-black group-hover:bg-white group-hover:text-black transition-colors">
                 <Shield className="w-6 h-6 text-black" />
               </div>
-              <h3 className="text-2xl font-black uppercase tracking-tighter">Private Vault</h3>
+              <h3 className="text-2xl font-black uppercase tracking-tighter">Private</h3>
               <p className="text-highest font-mono text-sm uppercase leading-relaxed">
-                Your prompts are yours alone. Secured with industry-standard encryption and logic.
+                Your prompts are private. No one else can see them.
               </p>
             </div>
           </div>
@@ -99,7 +102,7 @@ export default async function LandingPage() {
           <div className="flex animate-marquee gap-20">
             {[...Array(6)].map((_, i) => (
               <span key={i} className="text-primary font-mono text-[10px] uppercase font-bold tracking-[0.3em]">
-                SCANNING VAULT // ENCRYPTED STORAGE // INSTANT ACCESS // SYNCING...
+                SYNCING VAULT // SAVING DATA // READY...
               </span>
             ))}
           </div>
@@ -109,19 +112,19 @@ export default async function LandingPage() {
         <section className="w-full py-60 px-6 flex flex-col items-center justify-center text-center space-y-12 bg-linear-to-b from-background to-surface">
           <div className="border-4 border-white p-1 shadow-brutalist-white">
              <div className="bg-white text-black px-8 py-3 font-black uppercase tracking-widest text-lg">
-               Universal Extension
+               Browser Extension
              </div>
           </div>
           <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter max-w-5xl leading-[0.9]">
-            Save stuff from <span className="text-secondary">anywhere.</span>
+            Save from <span className="text-secondary">anywhere.</span>
           </h2>
           <p className="max-w-xl text-highest font-mono uppercase tracking-tight text-sm leading-relaxed">
-            One hotkey. One click. Your current text selection is instantly committed to your vault and synced across all your devices.
+            One click to save text from any website into your vault.
           </p>
           <div className="pt-10">
             <Link href="/dashboard/install">
               <Button variant="secondary" className="px-10 py-6 border-4 border-black text-black">
-                Install Extension
+                Install Tool
               </Button>
             </Link>
           </div>

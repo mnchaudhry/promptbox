@@ -5,11 +5,11 @@ import { Download, Globe, ShieldCheck, Zap } from "lucide-react";
 
 export default function InstallPage() {
   return (
-    <div className="flex-1 p-8 md:p-12 space-y-12 max-w-5xl mx-auto">
+    <div className="flex-1 p-8 md:p-12 space-y-12">
       <div className="space-y-4">
         <h1 className="text-5xl font-black uppercase tracking-tighter">Install promptbox<span className="text-primary">.</span></h1>
         <p className="font-mono text-xs uppercase tracking-widest text-highest max-w-2xl leading-relaxed">
-          The manual work ends here. Install the companion app to capture any text from any website directly into your vault.
+          Stop copying manually. Install the tool to save text from any website directly to your vault.
         </p>
       </div>
 
@@ -17,10 +17,10 @@ export default function InstallPage() {
         <Card className="p-8 border-4 border-primary bg-surface shadow-brutalist-orange space-y-6">
           <div className="flex items-center gap-4">
             <Globe className="w-10 h-10 text-primary" />
-            <h2 className="text-2xl font-black uppercase tracking-tighter">Chrome Extension</h2>
+            <h2 className="text-2xl font-black uppercase tracking-tighter">Extension</h2>
           </div>
           <p className="font-mono text-xs uppercase text-highest leading-relaxed">
-            Our most powerful companion. Works on Chrome, Brave, Arc, and all Chromium browsers.
+            The main tool. Works on Chrome, Brave, Arc, and other browsers.
           </p>
           <Button className="w-full py-6 bg-primary text-black font-black uppercase border-3 border-black shadow-brutalist hover:bg-white transition-all">
             Add to Browser
@@ -34,7 +34,7 @@ export default function InstallPage() {
               <h2 className="text-2xl font-black uppercase tracking-tighter">Local App</h2>
             </div>
             <p className="font-mono text-xs uppercase text-highest leading-relaxed">
-              Desktop companion for deeper system integration (Coming Sunday).
+              Desktop app for your computer. Coming soon.
             </p>
           </div>
           <Button variant="outline" disabled className="w-full py-6 border-3 border-outline opacity-50 cursor-not-allowed">
@@ -44,27 +44,27 @@ export default function InstallPage() {
       </div>
 
       <div className="border-t-4 border-outline pt-12">
-        <h3 className="text-xl font-bold uppercase mb-8">Why install the companion?</h3>
+        <h3 className="text-xl font-bold uppercase mb-8">Why use the tool?</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-3">
             <Zap className="text-primary w-6 h-6" />
             <h4 className="font-bold uppercase text-sm">One-Click Save</h4>
             <p className="font-mono text-[10px] uppercase text-highest leading-relaxed">
-              Highlight text on any site and click the popover or hotkey to save instantly.
+              Highlight any text and click to save it instantly.
             </p>
           </div>
           <div className="space-y-3">
             <ShieldCheck className="text-secondary w-6 h-6" />
-            <h4 className="font-bold uppercase text-sm">Context Aware</h4>
+            <h4 className="font-bold uppercase text-sm">Smart Links</h4>
             <p className="font-mono text-[10px] uppercase text-highest leading-relaxed">
-              Automatically captures the URL and page title so you know where it came from.
+              Saves the link and page title so you can find it later.
             </p>
           </div>
           <div className="space-y-3">
             <Download className="text-white w-6 h-6" />
-            <h4 className="font-bold uppercase text-sm">Offline Access</h4>
+            <h4 className="font-bold uppercase text-sm">Everywhere</h4>
             <p className="font-mono text-[10px] uppercase text-highest leading-relaxed">
-              Browse your prompts even when you aren&apos;t on the website.
+              Access your prompts even when you leave the website.
             </p>
           </div>
         </div>

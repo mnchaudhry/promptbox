@@ -13,7 +13,10 @@ export default function DashboardLayout({ children, }: { children: React.ReactNo
       <aside className="w-64 border-r-3 border-outline flex flex-col h-full overflow-hidden shrink-0">
         {/* Brand */}
         <div className="p-6 border-b-3 border-outline">
-          <Link href="/dashboard" className="flex items-center gap-2">
+          <Link href="/dashboard" className="flex items-center gap-3">
+            <div className="w-8 h-8 bg-primary rounded-none flex items-center justify-center border-2 border-black shadow-brutalist-orange shrink-0">
+              <span className="text-black font-black text-xl">P</span>
+            </div>
             <h2 className="text-xl font-bold uppercase tracking-tighter">
               promptbox<span className="text-primary">.</span>
             </h2>
@@ -23,24 +26,34 @@ export default function DashboardLayout({ children, }: { children: React.ReactNo
           </div>
         </div>
 
-        {/* Primary Nav */}
-        <DashboardNav />
+        {/* Primary Nav & Extension */}
+        <div className="flex-1 overflow-y-auto flex flex-col justify-start">
+          <DashboardNav />
+          <div className="px-4 pb-4">
+            <Link
+              href="/dashboard/install"
+              className="flex items-center justify-between h-14 p-4 bg-secondary/10 border-2 border-secondary/50 text-secondary hover:bg-secondary/20 transition-colors group"
+            >
+              <div className="flex items-center gap-3">
+                <Download className="w-4 h-4" />
+                <span className="font-mono text-[11px] uppercase font-bold">Get Browser App</span>
+              </div>
+              <span className="w-2 h-2 bg-secondary" />
+            </Link>
+          </div>
+        </div>
 
-        {/* System Status / Extensions */}
-        <div className="p-4 space-y-4 border-t-3 border-outline">
-          <Link
-            href="/dashboard/install"
-            className="flex items-center justify-between p-4 bg-secondary/10 border-2 border-secondary/50 text-secondary hover:bg-secondary/20 transition-colors group"
-          >
-            <div className="flex items-center gap-3">
-              <Download className="w-4 h-4" />
-              <span className="font-mono text-[10px] uppercase font-bold">Get Browser App</span>
-            </div>
-            <span className="w-2 h-2 bg-secondary" />
-          </Link>
-
-          <div className="flex items-center justify-between px-2">
-            <UserButton />
+        {/* User Profile Footer */}
+        <div className="p-4 border-t-3 border-outline">
+          <div className="w-full">
+            <UserButton showName appearance={{
+              elements: {
+                userButtonTrigger: "w-full !flex !flex-row items-center justify-start h-14 p-4 !bg-white border-2 border-black rounded-none shadow-[4px_4px_0px_0px_white] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all",
+                userButtonBox: "!flex !flex-row items-center gap-4 !w-full !max-w-none",
+                userButtonAvatarBox: "!-order-1 rounded-none border-2 border-black w-7 h-7 shrink-0",
+                userButtonOuterIdentifier: "font-mono text-[11px] uppercase font-black !text-black !opacity-100 tracking-widest",
+              }
+            }} />
           </div>
         </div>
       </aside>

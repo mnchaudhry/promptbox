@@ -54,13 +54,16 @@ export default function RootLayout({
           // User Button & Dropdown - The Brutalist Version
           userButtonAvatarBox: "rounded-none border-2 border-primary w-10 h-10",
           userButtonTrigger: "rounded-none border-2 border-outline focus:shadow-none focus:border-primary p-0.5",
-          userButtonPopoverCard: "border-4 border-outline bg-surface rounded-none shadow-brutalist-orange overflow-hidden",
-          userButtonPopoverMain: "bg-surface p-0",
+          userButtonPopoverCard: "border-4 border-outline bg-background rounded-none shadow-brutalist-orange overflow-hidden",
+          userButtonPopoverMain: "bg-background p-0",
+          userButtonPopoverHeaderTitle: "text-white! font-bold uppercase tracking-tighter !text-white",
+          userButtonPopoverHeaderSubtitle: "text-highest font-mono text-[10px] uppercase tracking-widest !text-white/60",
           userButtonPopoverActions: "p-2",
-          userButtonPopoverActionButton: "rounded-none hover:bg-primary hover:text-black transition-all p-3",
-          userButtonPopoverActionButtonText: "font-mono uppercase tracking-widest text-[10px] font-bold",
-          userButtonPopoverActionButtonIcon: "text-primary group-hover:text-black",
-          userButtonPopoverFooter: "hidden", // Hide the "Secured by Clerk" for maximum aesthetic
+          userButtonPopoverActionButton: "rounded-none hover:bg-primary hover:text-black transition-all p-3 group",
+          userButtonPopoverActionButtonText: "font-mono uppercase tracking-widest text-[10px] font-bold !text-white group-hover:!text-black",
+          userButtonPopoverActionButtonIcon: "text-primary group-hover:!text-black",
+          userProfileData: "p-4 border-b-2 border-outline",
+          userButtonPopoverFooter: "hidden",
           
           userProfileCard: "border-3 border-outline bg-surface rounded-none shadow-brutalist-orange",
           userProfileNavbar: "border-r-3 border-outline bg-surface-lowest",
