@@ -54,7 +54,7 @@ export default function SignInForm() {
     if (!signIn) return;
     signIn.authenticateWithRedirect({
       strategy,
-      redirectUrl: "/sign-up/sso-callback",
+      redirectUrl: "/sso-callback",
       redirectUrlComplete: "/dashboard",
     });
   };

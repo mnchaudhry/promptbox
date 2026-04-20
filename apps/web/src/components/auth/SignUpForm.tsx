@@ -76,7 +76,7 @@ export default function SignUpForm() {
     if (!signUp) return;
     signUp.authenticateWithRedirect({
       strategy,
-      redirectUrl: "/sign-up/sso-callback",
+      redirectUrl: "/sso-callback",
       redirectUrlComplete: "/dashboard",
     });
   };
