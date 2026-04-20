@@ -56,7 +56,7 @@ export default function RootLayout({
           userButtonTrigger: "rounded-none border-2 border-outline focus:shadow-none focus:border-primary p-0.5",
           userButtonPopoverCard: "border-4 border-outline bg-background rounded-none shadow-brutalist-orange overflow-hidden",
           userButtonPopoverMain: "bg-background p-0",
-          userButtonPopoverHeaderTitle: "text-white! font-bold uppercase tracking-tighter !text-white",
+          userButtonPopoverHeaderTitle: "text-white font-bold uppercase tracking-tighter !text-white",
           userButtonPopoverHeaderSubtitle: "text-highest font-mono text-[10px] uppercase tracking-widest !text-white/60",
           userButtonPopoverActions: "p-2",
           userButtonPopoverActionButton: "rounded-none hover:bg-primary hover:text-black transition-all p-3 group",
